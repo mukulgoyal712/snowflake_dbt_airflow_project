@@ -39,7 +39,7 @@ This project implements a data pipeline for the TPC-H dataset, utilizing Amazon 
 ![alt text](image-5.png)
 - Data are ingested in facts and dimensions to enable faster analytical queries
 #### Snapshot schema structure
-![alt text](image-8.png)
+![alt text](image-7.png)
 - The dimension tables such as customer, nation, part, supplier, part supplier are separately maintained in snapshot schema by implementing SCD type 2 so that historical changes can be maintained in a table.
 #### Audits schema structure
 ![alt text](image-6.png)

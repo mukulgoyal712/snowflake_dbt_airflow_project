@@ -1,15 +1,11 @@
 # Overview
 This project implements a data pipeline for the TPC-H dataset, utilizing Amazon S3 for data storage, Snowflake as the data warehouse, dbt for data transformations, and Apache Airflow for orchestration. The pipeline processes and transforms the raw CSV data into analytical tables for reporting and analysis.
 
-
 # Tech Stack used:
 - Amazon S3: Cloud storage service to store raw CSV files.
 - Snowflake: Cloud-based data warehouse for storing, querying, and transforming data.
 - dbt (Data Build Tool): A transformation tool for managing and executing SQL models in Snowflake.
 - Apache Airflow: Workflow orchestration tool for managing the scheduling and execution of tasks.
-
-# Project Structure:
-
 
 # Datasets
 - Customers
@@ -43,7 +39,7 @@ This project implements a data pipeline for the TPC-H dataset, utilizing Amazon 
 ![alt text](image-5.png)
 - Data are ingested in facts and dimensions to enable faster analytical queries
 #### Snapshot schema structure
-![alt text](image-7.png)
+![alt text](image-8.png)
 - The dimension tables such as customer, nation, part, supplier, part supplier are separately maintained in snapshot schema by implementing SCD type 2 so that historical changes can be maintained in a table.
 #### Audits schema structure
 ![alt text](image-6.png)

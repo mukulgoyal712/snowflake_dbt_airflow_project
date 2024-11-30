@@ -1,0 +1,43 @@
+version: 2
+
+snapshots:
+  - name: customers_snapshot
+    config:
+      schema: snapshots
+      unique_key: c_custkey
+      strategy: timestamp
+      updated_at: _etl_loaded_at
+      invalidate_hard_deletes: true
+  - name: nations_snapshot
+    config:
+      schema: snapshots
+      unique_key: n_nationkey
+      strategy: timestamp
+      updated_at: _etl_loaded_at
+      invalidate_hard_deletes: true
+  - name: parts_snapshot
+    config:
+      schema: snapshots
+      unique_key: p_partkey
+      strategy: timestamp
+      updated_at: _etl_loaded_at
+      invalidate_hard_deletes: true
+  - name: partsupplier_snapshot
+    config:
+      schema: snapshots
+      strategy: timestamp
+      updated_at: _etl_loaded_at
+      unique_key: ps_part_supp_key
+      invalidate_hard_deletes: true
+  - name: suppliers_snapshot
+    config:
+      schema: snapshots
+      strategy: check
+      check_cols:
+        - 's_name'
+        - 's_address'
+        - 's_nationkey'
+        - 's_phone'
+        - 's_acctbal'
+      unique_key: s_suppkey
+      invalidate_hard_deletes: true

@@ -1,0 +1,53 @@
+version: 2
+
+sources:
+  - name: staging
+    description: "Raw data sources from Amazon S3 bucket"
+    database: tpch_elt
+    config:
+      enabled: true
+      tags:
+        - raw_data
+    tables:
+        - name: stg_customer
+          description: ""
+          freshness:
+            warn_after: {count: 12, period: hour}
+            error_after: {count: 1, period: day}
+          loaded_at_field: _etl_loaded_at
+        - name: stg_lineitem
+          description: ""
+          freshness:
+            warn_after: {count: 12, period: hour}
+            error_after: {count: 1, period: day}
+          loaded_at_field: _etl_loaded_at
+        - name: stg_nation
+          description: ""
+          freshness:
+            warn_after: {count: 12, period: hour}
+            error_after: {count: 1, period: day}
+          loaded_at_field: _etl_loaded_at
+        - name: stg_orders
+          description: ""
+          freshness:
+            warn_after: {count: 12, period: hour}
+            error_after: {count: 1, period: day}
+          loaded_at_field: _etl_loaded_at
+        - name: stg_part
+          description: ""
+          freshness:
+            warn_after: {count: 12, period: hour}
+            error_after: {count: 1, period: day}
+          loaded_at_field: _etl_loaded_at
+        - name: stg_partsupp
+          description: ""
+          freshness:
+            warn_after: {count: 12, period: hour}
+            error_after: {count: 1, period: day}
+          loaded_at_field: _etl_loaded_at
+        - name: stg_suppliers
+          description: ""
+          freshness:
+            warn_after: {count: 12, period: hour}
+            error_after: {count: 1, period: day}
+          loaded_at_field: _etl_loaded_at

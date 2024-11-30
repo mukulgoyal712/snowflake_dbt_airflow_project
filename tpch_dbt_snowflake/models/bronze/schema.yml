@@ -1,0 +1,97 @@
+version: 2
+#add more tests
+models:
+  - name: customers_bz
+    description: ""
+    config:
+      materialized: table
+      on_schema_change: ignore #enable schema changes
+      tags:
+        - customer
+    columns:
+      - name: c_custkey
+        description: "Customer identifier"
+        tests:
+          - not_null
+          - unique
+  - name: lineitems_bz
+    description: ""
+    config:
+      materialized: table
+      on_schema_change: fail #enable schema changes
+      tags:
+        - lineitems
+    columns:
+      - name: l_orderkey
+        tests:
+          - not_null
+      - name: l_partkey
+        tests:
+          - not_null
+      - name: l_suppkey
+        tests:
+          - not_null
+  - name: nations_bz
+    description: ""
+    config:
+      materialized: table
+      on_schema_change: ignore #enable schema changes
+      tags:
+        - nation
+    columns:
+      - name: n_nationkey
+        description: "nation identifier"
+        tests:
+          - not_null
+          - unique
+  - name: orders_bz
+    description: ""
+    config:
+      materialized: table
+      on_schema_change: fail #enable schema changes
+      tags:
+        - order
+    columns:
+      - name: o_orderkey
+        description: "order key"
+        tests:
+          - not_null
+          - unique
+  - name: parts_bz
+    description: ""
+    config:
+      materialized: table
+      on_schema_change: ignore
+      tags:
+        - parts
+    columns:
+      - name: p_partkey
+        description: ""
+        tests:
+          - not_null
+          - unique
+  - name: partsupplier_bz
+    description: ""
+    config:
+      materialized: table
+      on_schema_change: ignore
+    columns:
+      - name: ps_partkey
+        description: ""
+        tests:
+          - not_null
+      - name: ps_suppkey
+        description: ""
+        tests:
+          - not_null
+  - name: suppliers_bz
+    description: ""
+    config:
+      materialized: table
+      on_schema_change: ignore
+      tags: suppliers
+    columns:
+      - name: s_suppkey
+        tests:
+          - not_null
+          - unique

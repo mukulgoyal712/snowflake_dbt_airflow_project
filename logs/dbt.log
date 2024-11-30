@@ -1,0 +1,64 @@
+[0m23:41:29.458802 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102d7cd70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1047a7ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1047a7d90>]}
+
+
+============================== 23:41:29.460982 | 94a29d58-b57d-4c9f-81f0-854e83697214 ==============================
+[0m23:41:29.460982 [info ] [MainThread]: Running with dbt=1.8.0
+[0m23:41:29.461231 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/Users/muku-mac/.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt init', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m23:41:35.573463 [debug] [MainThread]: Starter project path: /Users/muku-mac/Documents/dbt_project/venv/lib/python3.13/site-packages/dbt/include/starter_project
+[0m23:41:35.579712 [info ] [MainThread]: 
+Your new dbt project "tpch_dbt_snowflake" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m23:41:35.580002 [info ] [MainThread]: Setting up your profile.
+[0m23:42:39.364440 [info ] [MainThread]: Profile tpch_dbt_snowflake written to /Users/muku-mac/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m23:42:39.368466 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 69.93387, "process_user_time": 0.543994, "process_kernel_time": 0.112015, "process_mem_max_rss": "96288768", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m23:42:39.369466 [debug] [MainThread]: Command `dbt init` succeeded at 23:42:39.369238 after 69.94 seconds
+[0m23:42:39.370490 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10708dba0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103bf67b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107045f20>]}
+[0m23:42:39.371299 [debug] [MainThread]: Flushing usage events
+[0m23:43:12.879869 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1028a4d70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104183ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104183d90>]}
+
+
+============================== 23:43:12.882113 | ab1a264b-de79-40f7-ba5f-969120723711 ==============================
+[0m23:43:12.882113 [info ] [MainThread]: Running with dbt=1.8.0
+[0m23:43:12.882382 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/muku-mac/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m23:43:12.893564 [info ] [MainThread]: dbt version: 1.8.0
+[0m23:43:12.893748 [info ] [MainThread]: python version: 3.13.0
+[0m23:43:12.893858 [info ] [MainThread]: python path: /Users/muku-mac/Documents/dbt_project/venv/bin/python
+[0m23:43:12.893958 [info ] [MainThread]: os info: macOS-14.6-arm64-arm-64bit-Mach-O
+[0m23:43:13.018549 [info ] [MainThread]: Using profiles dir at /Users/muku-mac/.dbt
+[0m23:43:13.018755 [info ] [MainThread]: Using profiles.yml file at /Users/muku-mac/.dbt/profiles.yml
+[0m23:43:13.018876 [info ] [MainThread]: Using dbt_project.yml file at /Users/muku-mac/Documents/dbt_project/tpch_project/dbt_project.yml
+[0m23:43:13.019029 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m23:43:13.020347 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.17118454, "process_user_time": 0.514441, "process_kernel_time": 0.094468, "process_mem_max_rss": "116047872", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m23:43:13.020585 [debug] [MainThread]: Command `dbt debug` failed at 23:43:13.020544 after 0.17 seconds
+[0m23:43:13.020712 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c8f6f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104f8c3b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c66ad0>]}
+[0m23:43:13.020845 [debug] [MainThread]: Flushing usage events
+[0m23:44:33.713361 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1180b4d70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11dee3ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11dee3d90>]}
+
+
+============================== 23:44:33.716731 | 68731893-d2f2-4871-83f5-d6bd34693e59 ==============================
+[0m23:44:33.716731 [info ] [MainThread]: Running with dbt=1.8.0
+[0m23:44:33.717100 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/muku-mac/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt deps', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:44:33.717541 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/muku-mac/Documents/dbt_project/tpch_project/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m23:44:33.718988 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_wall_clock_time": 0.033108626, "process_user_time": 0.470505, "process_kernel_time": 0.083942, "process_mem_max_rss": "97746944", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m23:44:33.719307 [debug] [MainThread]: Command `dbt deps` failed at 23:44:33.719260 after 0.03 seconds
+[0m23:44:33.719453 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11df2cd60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11dcb9fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11dbf39b0>]}
+[0m23:44:33.719599 [debug] [MainThread]: Flushing usage events

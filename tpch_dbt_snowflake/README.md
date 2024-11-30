@@ -32,15 +32,20 @@ This project implements a data pipeline for the TPC-H dataset, utilizing Amazon 
 #### Bronze schema structure
 ![alt text](image-3.png)
 - Data are picked from staging and applied data cleaning transformations such as data type conversion, null handling, text cleaning (trimming extra spaces)
+- errors are captured before data goes to downstream models
+- - Singular tests are defined under tests folder to test and validate business logic
+- - Generic tests are defined in schema.yml file
 #### Silver schema structure
 ![alt text](image-4.png)
-- Data are ingested incrementally and applied transformations so that only the new incoming data is processed.
+- Data are ingested incrementally and applied transformations so that only the new incoming data is processed
 #### Gold schema structure
 ![alt text](image-5.png)
 - Data are ingested in facts and dimensions to enable faster analytical queries
 #### Snapshot schema structure
 ![alt text](image-7.png)
-- The dimension tables such as customer, nation, part, supplier, part supplier are separately maintained in snapshot schema by implementing SCD type 2 so that historical changes can be maintained in a table.
+- The dimension tables such as customer, nation, part, supplier, part supplier are separately maintained in snapshot schema by implementing SCD type 2 so that historical changes can be maintained in a table
+- Macros are used in the models for reusability
 #### Audits schema structure
 ![alt text](image-6.png)
-- Audit schema is implemented for better auditing the tables.
+- Audit schema is implemented for better auditing the tables
+- Utilized hooks to add logs before and after execution of the dbt pipelines

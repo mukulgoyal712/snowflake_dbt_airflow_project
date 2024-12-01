@@ -20,6 +20,9 @@ This project implements a data pipeline for the TPC-H dataset, utilizing Amazon 
 # ER Diagram:
 ![alt text](image.png)
 
+# Airflow DAG
+![alt text](image-8.png)
+
 # Snowflake database structure
 
 ### Schema structure
